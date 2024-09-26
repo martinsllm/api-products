@@ -1,4 +1,4 @@
-package com.example.api_products_mysql.infraestructure.entities;
+package com.example.api_products.domain.entities;
 
 import java.time.LocalDateTime;
 import jakarta.persistence.Entity;
