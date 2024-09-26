@@ -1,6 +1,8 @@
 package com.example.api_products.business.converter;
 
 import java.time.LocalDateTime;
+import java.util.List;
+
 import org.springframework.stereotype.Component;
 
 import com.example.api_products.domain.dto.ProdutoDTO;
@@ -24,6 +26,10 @@ public class ProdutoConverter {
             .descricao(produto.getDescricao())
             .preco(produto.getPreco())
             .build();
+    }
+
+    public List<ProdutoDTO> paraListaProdutosDTO(List<ProdutoEntity> produtos) {
+        return produtos.stream().map(this::paraProdutoDTO).toList();
     }
     
 }
