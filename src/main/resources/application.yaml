@@ -10,3 +10,6 @@ spring:
     hibernate.ddl-auto: update
     generate-ddl: true
     show-sql: true
+token:
+  signing:
+    key: ${JWT_SECRET:my-secret-key}
